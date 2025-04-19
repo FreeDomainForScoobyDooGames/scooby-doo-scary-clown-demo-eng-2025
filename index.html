@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scooby Doo</title>
+</head>
+<body>
+    <div id="canvas" class="centered" style="overflow: hidden;background: url('gfx/cursors/none.image') no-repeat center; width: 640px; height: 480px; border: 1px solid black;">
+      <button id="NewGameButton" style="
+        position: absolute;
+        left: 237px;
+        top: 202px;
+        width: 167px; 
+        height: 89px; 
+        background: url('gfx/cursors/none.image') no-repeat center;
+        background-size: cover;
+        outline: none;
+        border: none;
+        cursor: url('gfx/cursors/grab.image'), pointer;" onclick="Setup()">
+      </button>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
+
+<style>
+    .centered 
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 640px;
+        height: 480px;
+        background-color: lightblue;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    body 
+    {
+        background-color: black;
+        cursor: url('gfx/cursors/default.image'), default;
+    }
+    body.cursor-hidden
+    {
+        cursor: none;
+    }
+    /*Room Fadeout Effect*/
+    .black-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: black;
+      animation: slideOutRight 2s ease-in-out forwards;
+    }
+
+    @keyframes slideOutRight {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(100%);
+      }
+    }
+
+    .tictactoe_container 
+    {
+      height: 200px;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .ttt_button 
+    {
+      width: 100px;
+      height: 100px;
+      text-align:center;
+      font-size: 75px;
+      user-select: none;
+      cursor: url('gfx/cursors/grab.image'), pointer;
+      color: lightgray;
+      background: url('gfx/cursors/none.image') no-repeat center;
+      background-size: cover;
+      outline: none;
+      border: none;
+    }
+
+    .ttt_button:disabled 
+    {
+      width: 100px;
+      height: 100px;
+      margin-top: 5px;
+    }
+
+    @font-face { font-family: Scooby Doo; src: url('gfx/fonts/scoobydoo.font'); } 
+</style>
