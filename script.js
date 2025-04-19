@@ -1,3 +1,37 @@
+const preloadImage = (url) => {
+    const img = new Image();
+    img.src = url;
+  };
+  
+preloadImage('gfx/characters/team.image');
+preloadImage('gfx/characters/team_scared.image');
+preloadImage('gfx/cursors/default.image');
+preloadImage('gfx/cursors/grab.image');
+preloadImage('gfx/cursors/none.image');
+preloadImage('gfx/cursors/pointer_down.image');
+preloadImage('gfx/cursors/pointer_left.image');
+preloadImage('gfx/cursors/pointer_leftdown.image');
+preloadImage('gfx/cursors/pointer_leftup.image');
+preloadImage('gfx/cursors/pointer_right.image');
+preloadImage('gfx/cursors/pointer_rightdown.image');
+preloadImage('gfx/cursors/pointer_rightup.image');
+preloadImage('gfx/cursors/pointer_up.image');
+preloadImage('gfx/hud/back.image');
+preloadImage('gfx/hud/scooby_snacks_hud.image');
+preloadImage('gfx/rooms/room_black.image');
+preloadImage('gfx/rooms/room_carousel.image');
+preloadImage('gfx/rooms/room_carousel2.image');
+preloadImage('gfx/rooms/room_center.image');
+preloadImage('gfx/rooms/room_entrance.image');
+preloadImage('gfx/rooms/room_forest.image');
+preloadImage('gfx/rooms/room_garden.image');
+preloadImage('gfx/rooms/room_hall.image');
+preloadImage('gfx/rooms/room_hall_face1.image');
+preloadImage('gfx/rooms/room_hall_face2.image');
+preloadImage('gfx/rooms/room_hall_mainmenu.image');
+preloadImage('gfx/rooms/room_hall_mainmenu2.image');
+preloadImage('gfx/rooms/room_hall_tictactoe.image');
+
 let intro_skip = true;
 
 let chase_skip = false;
