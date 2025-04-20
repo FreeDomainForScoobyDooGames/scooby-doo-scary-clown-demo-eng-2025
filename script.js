@@ -2144,8 +2144,9 @@ function Setup()
 {
     //Preload Images
     const preloadImage = (url) => {
-        document.getElementById("canvas").style.backgroundImage = `url(${url})`;
-      };
+        const img = new Image();
+        img.src = url;
+    };
     preloadImage('gfx/characters/team.image');
     preloadImage('gfx/characters/team_scared.image');
     preloadImage('gfx/cursors/default.image');
@@ -2244,18 +2245,21 @@ function Setup()
     preloadSound('sfx/voice/velma3.sound');
     preloadSound('sfx/voice/velma4.sound');
     //Preload Movies
-    const preloadMovie = (url) => {
-        document.getElementById("preload_movie").innerHTML = `<video id="movie" autoplay muted loop playsinline style="width: 100%; height: auto;">
-            <source src=${url} type="video/mp4">
-            Movie fail.
-        </video>`;
-    };
-    preloadMovie('gfx/movies/demo_end.movie');
-    preloadMovie('gfx/movies/intro.movie');
-    preloadMovie('gfx/movies/room_carousel_ghost_appear.movie');
-    preloadMovie('gfx/movies/room_carousel2_ghost_appear.movie');
-    preloadMovie('gfx/movies/room_garden_ghost_appear.movie');
-    preloadMovie('gfx/movies/room_hall_ghost_appear.movie');
+    const videosToPreload = [
+        'gfx/movies/demo_end.mp4',
+        'gfx/movies/intro',
+        'gfx/movies/room_carousel_ghost_appear',
+        'gfx/movies/room_carousel2_ghost_appear',
+        'gfx/movies/room_garden_ghost_appear',
+        'gfx/movies/room_hall_ghost_appear'
+    ];
+    videosToPreload.forEach((src) => {
+        const video = document.createElement('video');
+        video.src = src;
+        video.preload = 'auto';
+        video.muted = true; // fontos, hogy ne blokkolja a böngésző
+        video.load();
+    });
     //Remove New Game Button
     document.getElementById("NewGameButton").remove();
     //Movie
