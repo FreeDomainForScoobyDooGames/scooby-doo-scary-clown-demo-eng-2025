@@ -1,36 +1,4 @@
-const preloadImage = (url) => {
-    const img = new Image();
-    img.src = url;
-  };
-  
-preloadImage('gfx/characters/team.image');
-preloadImage('gfx/characters/team_scared.image');
-preloadImage('gfx/cursors/default.image');
-preloadImage('gfx/cursors/grab.image');
-preloadImage('gfx/cursors/none.image');
-preloadImage('gfx/cursors/pointer_down.image');
-preloadImage('gfx/cursors/pointer_left.image');
-preloadImage('gfx/cursors/pointer_leftdown.image');
-preloadImage('gfx/cursors/pointer_leftup.image');
-preloadImage('gfx/cursors/pointer_right.image');
-preloadImage('gfx/cursors/pointer_rightdown.image');
-preloadImage('gfx/cursors/pointer_rightup.image');
-preloadImage('gfx/cursors/pointer_up.image');
-preloadImage('gfx/hud/back.image');
-preloadImage('gfx/hud/scooby_snacks_hud.image');
-preloadImage('gfx/rooms/room_black.image');
-preloadImage('gfx/rooms/room_carousel.image');
-preloadImage('gfx/rooms/room_carousel2.image');
-preloadImage('gfx/rooms/room_center.image');
-preloadImage('gfx/rooms/room_entrance.image');
-preloadImage('gfx/rooms/room_forest.image');
-preloadImage('gfx/rooms/room_garden.image');
-preloadImage('gfx/rooms/room_hall.image');
-preloadImage('gfx/rooms/room_hall_face1.image');
-preloadImage('gfx/rooms/room_hall_face2.image');
-preloadImage('gfx/rooms/room_hall_mainmenu.image');
-preloadImage('gfx/rooms/room_hall_mainmenu2.image');
-preloadImage('gfx/rooms/room_hall_tictactoe.image');
+
 
 let intro_skip = true;
 
@@ -2174,6 +2142,120 @@ function Travel_Room_Hall_To_Demo_End()
 
 function Setup() 
 {
+    //Preload Images
+    const preloadImage = (url) => {
+        document.getElementById("canvas").style.backgroundImage = `url(${url})`;
+      };
+    preloadImage('gfx/characters/team.image');
+    preloadImage('gfx/characters/team_scared.image');
+    preloadImage('gfx/cursors/default.image');
+    preloadImage('gfx/cursors/grab.image');
+    preloadImage('gfx/cursors/none.image');
+    preloadImage('gfx/cursors/pointer_down.image');
+    preloadImage('gfx/cursors/pointer_left.image');
+    preloadImage('gfx/cursors/pointer_leftdown.image');
+    preloadImage('gfx/cursors/pointer_leftup.image');
+    preloadImage('gfx/cursors/pointer_right.image');
+    preloadImage('gfx/cursors/pointer_rightdown.image');
+    preloadImage('gfx/cursors/pointer_rightup.image');
+    preloadImage('gfx/cursors/pointer_up.image');
+    preloadImage('gfx/hud/back.image');
+    preloadImage('gfx/hud/scooby_snacks_hud.image');
+    preloadImage('gfx/rooms/room_black.image');
+    preloadImage('gfx/rooms/room_carousel.image');
+    preloadImage('gfx/rooms/room_carousel2.image');
+    preloadImage('gfx/rooms/room_center.image');
+    preloadImage('gfx/rooms/room_entrance.image');
+    preloadImage('gfx/rooms/room_forest.image');
+    preloadImage('gfx/rooms/room_garden.image');
+    preloadImage('gfx/rooms/room_hall.image');
+    preloadImage('gfx/rooms/room_hall_face1.image');
+    preloadImage('gfx/rooms/room_hall_face2.image');
+    preloadImage('gfx/rooms/room_hall_mainmenu.image');
+    preloadImage('gfx/rooms/room_hall_mainmenu2.image');
+    preloadImage('gfx/rooms/room_hall_tictactoe.image');
+    preloadImage('gfx/rooms/room_hall_mainmenu.image');
+    //Preload Sounds
+    const preloadSound = (url) => {
+        //Preload Sound
+        const preload_sound = new Audio();
+        preload_sound.src = url;
+        preload_sound.volume = 0;
+        preload_sound.play();
+    };
+    preloadSound('sfx/music/0.sound');
+    preloadSound('sfx/music/1.sound');
+    preloadSound('sfx/music/2.sound');
+    preloadSound('sfx/music/3.sound');
+    preloadSound('sfx/music/4.sound');
+    preloadSound('sfx/music/chase.sound');
+    preloadSound('sfx/music/intro.sound');
+    preloadSound('sfx/music/silence.sound');
+    preloadSound('sfx/sound/appear.sound');
+    preloadSound('sfx/sound/bell.sound');
+    preloadSound('sfx/sound/break.sound');
+    preloadSound('sfx/sound/bush.sound');
+    preloadSound('sfx/sound/key_pickup.sound');
+    preloadSound('sfx/sound/sparking_light2.sound');
+    preloadSound('sfx/sound/violin1.sound');
+    preloadSound('sfx/sound/violin2.sound');
+    preloadSound('sfx/voice/after_chase1.sound');
+    preloadSound('sfx/voice/after_chase2.sound');
+    preloadSound('sfx/voice/after_chase3.sound');
+    preloadSound('sfx/voice/daphne0.sound');
+    preloadSound('sfx/voice/daphne1.sound');
+    preloadSound('sfx/voice/daphne2.sound');
+    preloadSound('sfx/voice/daphne3.sound');
+    preloadSound('sfx/voice/demo_end.sound');
+    preloadSound('sfx/voice/door_locked1.sound');
+    preloadSound('sfx/voice/door_locked2.sound');
+    preloadSound('sfx/voice/footprints1.sound');
+    preloadSound('sfx/voice/footprints2.sound');
+    preloadSound('sfx/voice/footprints3.sound');
+    preloadSound('sfx/voice/fred0.sound');
+    preloadSound('sfx/voice/fred1.sound');
+    preloadSound('sfx/voice/fred2.sound');
+    preloadSound('sfx/voice/fred3.sound');
+    preloadSound('sfx/voice/fred4.sound');
+    preloadSound('sfx/voice/fred5.sound');
+    preloadSound('sfx/voice/ghost_appear.sound');
+    preloadSound('sfx/voice/key1.sound');
+    preloadSound('sfx/voice/key2.sound');
+    preloadSound('sfx/voice/key3.sound');
+    preloadSound('sfx/voice/no_scooby_snacks1.sound');
+    preloadSound('sfx/voice/no_scooby_snacks2.sound');
+    preloadSound('sfx/voice/sandwich1.sound');
+    preloadSound('sfx/voice/sandwich2.sound');
+    preloadSound('sfx/voice/scooby0.sound');
+    preloadSound('sfx/voice/scooby1.sound');
+    preloadSound('sfx/voice/scooby2.sound');
+    preloadSound('sfx/voice/scooby3.sound');
+    preloadSound('sfx/voice/scooby4.sound');
+    preloadSound('sfx/voice/scooby5.sound');
+    preloadSound('sfx/voice/scooby6.sound');
+    preloadSound('sfx/voice/shaggy0.sound');
+    preloadSound('sfx/voice/shaggy1.sound');
+    preloadSound('sfx/voice/shaggy2.sound');
+    preloadSound('sfx/voice/shaggy3.sound');
+    preloadSound('sfx/voice/shaggy4.sound');
+    preloadSound('sfx/voice/velma0.sound');
+    preloadSound('sfx/voice/velma1.sound');
+    preloadSound('sfx/voice/velma2.sound');
+    preloadSound('sfx/voice/velma3.sound');
+    preloadSound('sfx/voice/velma4.sound');
+    //Preload Movies
+    const preloadMovie = (url) => {
+        document.getElementById("preload_movie").innerHTML = `<video id="movie" autoplay muted loop playsinline style="width: 100%; height: auto;">
+            <source src=${url} type="video/mp4">
+            Movie fail.
+        </video>`;
+    };
+    preloadMovie('gfx/movies/demo_end.movie');
+    preloadMovie('gfx/movies/intro.movie');
+    preloadMovie('gfx/movies/room_carousel_ghost_appear.movie');
+    preloadMovie('gfx/movies/room_carousel2_ghost_appear.movie');
+    preloadMovie('gfx/movies/room_garden_ghost_appear.movie');
+    preloadMovie('gfx/movies/room_hall_ghost_appear.movie');
     //Remove New Game Button
     document.getElementById("NewGameButton").remove();
     //Movie
